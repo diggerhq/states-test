@@ -23,3 +23,4 @@ resource "aws_ssm_parameter" "example_secret" {
     Environment = "dev"
   }
 }
+
