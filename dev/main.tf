@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 resource "aws_ssm_parameter" "example_secret" {
-  name        = "/dev/example/secret/"
+  name        = "/dev/example/secret"
   description = "Example secret parameter"
   type        = "SecureString"
   value       = "dummy-secret-value"
