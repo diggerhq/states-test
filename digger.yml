@@ -18,8 +18,8 @@ workflows:
       steps:
       - init:
         extra_args: ["-backend-config=tf_backend.tfbackend" ]
-      - run: terraform plan -input=false -out=$PLANFILE          
-
+      #- run: terraform plan -input=false -out=$PLANFILE          
+      - plan:
     apply:
       steps:
       - init:
