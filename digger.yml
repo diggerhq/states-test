@@ -18,7 +18,7 @@ workflows:
       steps:
       - init:
         extra_args: ["-backend-config=tf_backend.tfbackend" ]
-      - run: terraform plan -input=false -out=$DIGGER_PLANFILE          
+      - run: terraform plan -input=false -out=$DIGGER_PLANFILE -no-color
     apply:
       steps:
       - init:
