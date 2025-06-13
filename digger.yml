@@ -15,11 +15,12 @@ workflows:
       on_commit_to_default: ["digger unlock"]
 
     plan:
+      filter_regex: "((?i)filterme:\\s\"?)[^\"]*"
       steps:
       - init:
         extra_args: ["-backend-config=tf_backend.tfbackend" ]
       - plan:
-        filter_regex: "((?i)filterme:\\s\"?)[^\"]*"
+        
 
       #- run: terraform plan -input=false -out=$DIGGER_PLANFILE -no-color
     apply:
