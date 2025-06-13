@@ -18,7 +18,9 @@ workflows:
       steps:
       - init:
         extra_args: ["-backend-config=tf_backend.tfbackend" ]
-      - run: terraform plan -input=false -out=$DIGGER_PLANFILE -no-color
+      - plan:
+      #- run: terraform plan -input=false -out=$DIGGER_PLANFILE -no-color
+      #  filter_regex: "((?i)secret:\\s\")[^\"]*"
     apply:
       steps:
       - init:

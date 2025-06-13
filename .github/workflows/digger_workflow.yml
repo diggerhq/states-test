@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: ${{ fromJSON(github.event.inputs.spec).job_id }}
         run: echo "job id ${{ fromJSON(github.event.inputs.spec).job_id }}"
-      - uses: diggerhq/digger@feat/support-DIGGER_PLANFILE-env-variable-for-runs
+      - uses: diggerhq/digger@feat/filtered-regex
         with:
           digger-spec: ${{ inputs.spec }}
           setup-aws: true

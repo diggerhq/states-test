@@ -24,3 +24,7 @@ resource "aws_ssm_parameter" "example_secret" {
   }
 }
 
+
+output "example_secret" {
+  value = "secret: abc123"
+}
