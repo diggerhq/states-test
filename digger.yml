@@ -18,7 +18,9 @@ workflows:
       steps:
       - init:
         extra_args: ["-backend-config=tf_backend.tfbackend" ]
-      - plan:
+      - run:
+          command: terragrunt plan -input=false -out=$PLANFILE          
+
     apply:
       steps:
       - init:
